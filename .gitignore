@@ -36,7 +36,6 @@ src/
 *.sig
 
 pkg/
-src/
 # Logs
 logs
 *.log
