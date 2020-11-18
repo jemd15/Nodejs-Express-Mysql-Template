@@ -10,7 +10,6 @@
 *.sig
 
 pkg/
-src/
 *.tar
 *.tar.*
 *.jar
@@ -23,7 +22,6 @@ src/
 *.sig
 
 pkg/
-src/
 *.tar
 *.tar.*
 *.jar
