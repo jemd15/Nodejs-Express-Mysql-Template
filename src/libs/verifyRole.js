@@ -8,7 +8,7 @@ verifyRole.admin = function (req, res, next) {
     const bearerToken = bearer[1];
     req.token = bearerToken
     
-    let userData = jwt.verify(bearerToken, 'jwt-secret').userFound[0];
+    let userData = jwt.verify(bearerToken, process.env.SECRET).userFound[0];
     req.requester_id = userData.user_id;
     req.requester_role = userData.role;
     if(userData.role == 'admin'){

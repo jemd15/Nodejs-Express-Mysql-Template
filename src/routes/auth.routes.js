@@ -11,6 +11,70 @@ router.get('/', (req, res) => {
   });
 });
 
+/**
+ * @swagger
+ * /auth/login:
+ *  post:
+ *    tags:
+ *    - name: auth
+ *    description: To login users
+ *    parameters:
+ *      - in: body
+ *        description: User credentials
+ *        schema:
+ *          type:
+ *          required:
+ *            - email
+ *            - password
+ *          properties:
+ *            email:
+ *              type: string
+ *              example: j.doe@example.com
+ *            password:
+ *              type: string
+ *              example: $%&SDF$SD_F-Gs+ad*f45
+ *    responses:
+ *      '200':
+ *        description: Returns the user data.
+ *        schema:
+ *          type: object
+ *          properties:
+ *            success:
+ *              type: boolean
+ *              example: true
+ *            message:
+ *              type: string
+ *              example: login successful.
+ *            userData:
+ *              type: object
+ *              properties:
+ *                id:
+ *                  type: integer
+ *                  example: 1
+ *                firstname: 
+ *                  type: string
+ *                  example: John
+ *                lastname: 
+ *                  type: string
+ *                  example: Doe
+ *                email: 
+ *                  type: string
+ *                  example: j.doe@example.com
+ *                wallet: 
+ *                  type: integer
+ *                  example: 15000
+ *      '404':
+ *        description:
+ *        schema:
+ *          type: object
+ *          properties:
+ *            success:
+ *              type: boolean
+ *              example: false
+ *            message:
+ *              type: string
+ *              example: Wrong credentials.
+ */
 router.post('/login', (req, res) => {
   const {
     email,
