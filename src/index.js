@@ -23,7 +23,7 @@ const swaggerOptions = {
       license: {
         name: "MIT",
         url: "https://opensource.org/licenses/MIT"
-      }
+      } 
     },
     basePath: '/api',
     schemes: ['https']
