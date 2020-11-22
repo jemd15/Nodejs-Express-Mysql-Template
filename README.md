@@ -25,6 +25,24 @@ Finalmente, es necesario crear un archivo `.env` con las siguientes variables de
 | DB_PORT | integer | Puerto de la base de datos |
 | SECRET | string | Clave para cifrar con JWT |
 
+### Ejecutar servidor
+
+Para la ejecución del servidor puede usar los siguientes comandos:
+
+(producción)
+```sh
+$ npm start
+```
+
+(desarrollo)
+```sh
+$ npm run start:dev
+```
+
+`
+Nota: se recomienda el uso de PM2 para ejecutar el servidor en el ambiente de producción.
+`
+
 License
 ----
 
